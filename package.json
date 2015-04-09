@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "piswitch": "*"
-  }
+  },
   "node-red": {
     "nodes": {
       "piswitch": "piswitch.js"
