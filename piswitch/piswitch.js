@@ -8,7 +8,7 @@ module.exports = function(RED) {
 
     this.on('input', function(msg) {
 
-      var rc = require('./piswitch');
+      //var rc = require('./piswitch');
 
       var options = {};
       for (var prop in node.config) {
@@ -16,14 +16,15 @@ module.exports = function(RED) {
           options[prop] = node.config[prop] || msg[prop];
         }
       }
-      rc.setup(options);
+      //rc.setup(options);
 
-      var code = node.config.code || msg.code;
-      var type = node.config.type || msg.type;
-      var off = node.config.off || msg.off;
+      //var code = node.config.code || msg.code;
+      //var type = node.config.type || msg.type;
+      //var off = node.config.off || msg.off;
 
-      rc.send(code, type, off);
+      //rc.send(code, type, off);
 
+      node.send(options);
     });
 
   }
