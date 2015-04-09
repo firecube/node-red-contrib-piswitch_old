@@ -11,7 +11,7 @@
   }
   "node-red": {
     "nodes": {
-      "piswitch": "piswitch/piswitch.js"
+      "piswitch": "piswitch.js"
     }
   }
 }
