@@ -10,12 +10,9 @@ module.exports = function(RED) {
 
       //var rc = require('./piswitch');
 
-      var options = {};
-      for (var prop in node.config) {
-        if (node.config.hasOwnProperty(prop)) {
-          options[prop] = node.config[prop] || msg[prop];
-        }
-      }
+      msg.name: node.config.name || msg.name;
+      msg.prefix: node.config.prefix || msg.prefix;
+
       //rc.setup(options);
 
       //var code = node.config.code || msg.code;
@@ -24,7 +21,7 @@ module.exports = function(RED) {
 
       //rc.send(code, type, off);
 
-      node.send(options);
+      node.send(msg);
     });
 
   }
