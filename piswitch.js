@@ -10,8 +10,8 @@ module.exports = function(RED) {
 
       //var rc = require('./piswitch');
 
-      msg.name: node.config.name || msg.name;
-      msg.prefix: node.config.prefix || msg.prefix;
+      msg.name = node.config.name || msg.name;
+      msg.prefix = node.config.prefix || msg.prefix;
 
       //rc.setup(options);
 
